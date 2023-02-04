@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk11:alpine-slim AS overlay
 
-RUN apk --no-cache add curl
+RUN apk --no-cache add curl gettext
 RUN mkdir -p ~/.gradle \
     && echo "org.gradle.daemon=false" >> ~/.gradle/gradle.properties \
     && echo "org.gradle.configureondemand=true" >> ~/.gradle/gradle.properties \
